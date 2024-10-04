@@ -4,7 +4,7 @@ library(mapview)
 
 # ============================================
 # set working folder
-setwd("~/Desktop/LGL_Introduction_R_Spatial")
+# setwd("YOUR/PATH/HERE")
 # ============================================
 
 # gis data sets
