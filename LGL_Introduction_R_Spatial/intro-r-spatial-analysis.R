@@ -271,14 +271,16 @@ maplibre() |>
 # heatmap
 maplibre(bounds = h3_nhoods) |>
   add_heatmap_layer(
-    id = "licences",
+    id = "Heatmap",
     source = vic_business,
-    heatmap_color = interpolate(
-      property = "heatmap-density",
-      values = seq(0, 1, 0.2),
-      stops = c('rgba(33,102,172,0)', 'rgb(103,169,207)',
-                'rgb(209,229,240)', 'rgb(253,219,199)',
-                'rgb(239,138,98)', 'rgb(178,24,43)')
-    ),
-    heatmap_opacity = 0.7
+    heatmap_opacity = 0.5,
+    heatmap_radius = 20
+  ) |>
+  add_circle_layer(
+    id = "Business Locations",
+    source = vic_business,
+    circle_color = "blue",
+    min_zoom = 15,
+    popup = "TRADE_NAME"
   )
+
