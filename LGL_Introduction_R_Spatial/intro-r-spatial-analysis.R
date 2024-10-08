@@ -108,9 +108,6 @@ mapview(
   popup = list(FALSE, FALSE)
 )
 
-# find the name of the geometry column
-attr(vic_nhoods, "sf_column")
-
 # find the nearest aerodrome indices
 nearest = st_nearest_feature(places, aerodromes_3005)
 nearest
@@ -205,6 +202,7 @@ nrow(buildings) # 2+ billion buildings
 # download all buildings in Victoria
 # extract bbox
 vic_bbox = st_bbox(st_transform(vic_nhoods, 4326))
+mapview(st_as_sf(st_as_sfc(vic_bbox))) + vic_nhoods
 
 # read into memory all buildings in Victoria
 vic_buildings = buildings |>
@@ -283,4 +281,3 @@ maplibre(bounds = h3_nhoods) |>
     min_zoom = 15,
     popup = "TRADE_NAME"
   )
-
