@@ -48,7 +48,7 @@ mapview(list(island, places))
 mapview(
   select(places, place_name_en, population_estimate),
   layer.name = "Populated Places",
-  col.regions = "sienna1",
+  col.regions = "tomato",
   label = "place_name_en",
   popup = TRUE
 ) +
