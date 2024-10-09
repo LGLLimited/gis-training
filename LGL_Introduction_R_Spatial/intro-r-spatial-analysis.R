@@ -48,15 +48,15 @@ mapview(list(island, places))
 mapview(
   select(places, place_name_en, population_estimate),
   layer.name = "Populated Places",
-  col.regions = "red",
+  col.regions = "sienna1",
   label = "place_name_en",
   popup = TRUE
 ) +
   mapview(
     island,
     layer.name = "Vancouver Island",
-    col.regions = "gray",
-    alpha.regions = 0,
+    col.regions = "palegreen",
+    alpha.regions = 0.3,
     label = NA,
     popup = FALSE
   )
