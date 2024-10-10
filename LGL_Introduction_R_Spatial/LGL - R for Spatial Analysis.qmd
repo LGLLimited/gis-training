@@ -164,7 +164,7 @@ mapview(
     island,
     layer.name = "Vancouver Island",
     col.regions = "palegreen",
-    alpha.regions = 0,
+    alpha.regions = 0.3,
     label = NA,
     popup = FALSE
     )
